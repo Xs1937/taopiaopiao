@@ -5,8 +5,8 @@ import App from './App'
 import router from './router'
 
 
-import '../static/style/index.scss'
 
+import '../static/style/style.sass';
 require('./mock.js')
 
 Vue.config.productionTip = false

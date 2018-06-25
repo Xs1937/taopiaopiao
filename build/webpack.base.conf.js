@@ -3,7 +3,6 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const vuxLoader = require('vux-loader')
 function resolve(dir) {
 	return path.join(__dirname, '..', dir)
@@ -33,38 +32,19 @@ var originalConfig  = {
 				test: /\.vue$/,
 				loader: 'vue-loader',
 				options: vueLoaderConfig
-			},
+		},
 			{
-			    test:/\.css$/,
-			    use:ExtractTextPlugin.extract({
-			        fallback:"style-loader",
-			        use:[
-			            {loader:"css-loader",options:{importLoader:1}},
-			            "postcss-loader"
-			        ]
-			    })
-			},
-			{
-				test: /\.less$/,
-				use: ExtractTextPlugin.extract({
-					use: [{
-						loader: 'css-loader'
-					}, {
-						loader: 'less-loader'
-					}],
-					fallback: 'style-loader'
-				})
-			},
-			{
-				test: /\.scss$/,
-				use: ExtractTextPlugin.extract({
-					use: [{
-						loader: 'css-loader'
-					}, {
-						loader: 'sass-loader'
-					}],
-					fallback: 'style-loader'
-				})
+			  test: /\.sass$/,
+            use: [{
+                loader: "style-loader"
+            }, {
+                loader: "css-loader"
+            }, {
+                loader: "sass-loader",
+                options: {
+                    includePaths: ["absolute/path/a", "absolute/path/b"]
+                }
+            }]
 			},
 			{
 				test: /\.js$/,
