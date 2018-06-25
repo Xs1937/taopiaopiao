@@ -3,8 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import '../static/icon/iconfont.css'
+
+
 import '../static/style/index.scss'
+
+require('./mock.js')
 
 Vue.config.productionTip = false
 

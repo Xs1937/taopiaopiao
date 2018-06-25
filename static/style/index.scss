@@ -1,6 +1,26 @@
-div{
-    background: #fcc;
-    ul{
-        background: #f00;
+.menu-wrapper{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    padding: 7px 0;
+    border-top: 1px solid #ccc;
+    .menu-list{
+        display: flex;
+        .menu-item{
+            flex: 1;
+            font-size: 14px;
+            a{
+                display: block;
+                .icon{
+                font-size: 20px;
+                }
+                .menu-name{
+                    margin-top: 7px;
+                }
+            }
+            
+        }
     }
 }
