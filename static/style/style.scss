@@ -1,0 +1,120 @@
+.advert{
+    padding: 0.2rem 0.3rem;
+   img{
+       width: 100%;
+   }
+}
+.menu-wrapper{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    padding: 7px 0;
+    border-top: 1px solid #ccc;
+    .menu-list{
+        display: flex;
+        .menu-item{
+            flex: 1;
+            font-size: 14px;
+            a{
+                display: block;
+                .icon{
+                font-size: 20px;
+                }
+                .menu-name{
+                    margin-top: 7px;
+                }
+            
+            }
+        }
+    }
+}
+.hot-movie{
+    .title{
+        margin: 0.2rem 0.3rem;
+        display: flex;
+        //justify-content 用于设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。
+        //flex-start  默认值。项目位于容器的开头。 
+        //flex-end    项目位于容器的结尾。 
+        //center  项目位于容器的中心。
+        //space-between   项目位于各行之间留有空白的容器内。  
+        //space-around    项目位于各行之前、之间、之后都留有空白的容器内。  
+        //initial 设置该属性为它的默认值。
+        //inherit 从父元素继承该属性。
+        justify-content:space-between;
+        .classify-name{
+            font-size: 18px;
+        }
+        .classify-num{
+            font-size: 14px;
+            order: 3;
+        }
+    }
+}
+.movie-list{
+    position: relative;
+    margin-left: 0.3rem;
+    width: 1150px;
+    .list-item{
+        display: inline-block;
+        float: left;
+        width: 150px;
+        margin: 0.2rem 0.15rem;
+        &:first-child{
+            margin-left: 0;
+        }
+        .item-box{
+            position: relative;
+            .pic{
+               width: 100%;
+               height: 100%; 
+            }
+            .tigs,.score{
+                position: absolute;
+                left: 0.1rem;
+            }
+            .tigs{
+                top: 0.2rem;
+                display: inline-block;
+                border-radius: 3px;
+                background: rgba(255,255,255,0.9);
+                color: #333;
+                font-size: 12px;
+                padding: 0.1rem;
+            }
+            .score{
+                bottom: 0.2rem;
+                font-size: 14px;
+                color: #fea54c;
+            }
+            
+        }
+        .movie-name{
+            color: #2C3E50;
+            font-size: 16px;
+            text-align: left;
+            margin: 0.2rem 0;
+        }
+        .btn-box{
+            text-align: left;
+            .buy-movie{
+                color: #ffffff;
+                font-size: 12px;
+                border-radius: 16px;
+                display: inline-block;
+                padding: 0.25rem 0.35rem;
+                background: -webkit-linear-gradient(left, #ff79a2, #ef576e); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(left, #ff79a2, #ef576e); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(left, #ff79a2, #ef576e); /* Firefox 3.6 - 15 */
+                background: linear-gradient(left, #ff79a2, #ef576e); /* 标准的语法（必须放在最后） */
+            }
+            .buy-movie:active{
+                background: -webkit-linear-gradient(left, #ef576e, #ff79a2); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(left, #ef576e, #ff79a2); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(left, #ef576e, #ff79a2); /* Firefox 3.6 - 15 */
+                background: linear-gradient(left, #ef576e, #ff79a2); /* 标准的语法（必须放在最后） */
+            }
+        }
+    }
+}
