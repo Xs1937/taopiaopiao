@@ -1,3 +1,22 @@
+.content-wrapper{
+   margin-bottom: 1.75rem; 
+   position: relative;
+   .location-search{
+       position: absolute;
+       top: 0;
+       z-index: 100;
+       display: flex;
+       justify-content: space-between;
+       left: 0.3rem;
+       right: 0.3rem;
+       color: #ffffff;
+       font-size: 16px;
+       span{
+           display: inline-block;
+           margin: 0.3rem 0;
+       }
+   }
+}
 .advert{
     padding: 0.2rem 0.3rem;
    img{
@@ -11,6 +30,7 @@
     bottom: 0;
     z-index: 10;
     padding: 7px 0;
+    background-color: #ffffff;
     border-top: 1px solid #ccc;
     .menu-list{
         display: flex;
@@ -28,6 +48,7 @@
             
             }
         }
+        
     }
 }
 .hot-movie{
@@ -50,6 +71,82 @@
             font-size: 14px;
             order: 3;
         }
+    }
+    .movie-article{
+        .article-item{
+            display: flex;
+            margin: 0.5rem 0.3rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+            .article-title{
+                position: relative;
+                width: 60%;
+                .name{
+                    font-size: 16px;
+                    line-height: 1.3;
+                    display: -webkit-box!important;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    word-break: break-all;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp:3; /*控制多行文本的行数*/
+                }
+                .other{
+                    position: absolute;
+                    bottom: 0.1rem;
+                    left: 0;
+                    font-size: 14px;
+                    color: #999;
+                    display: flex;
+                    justify-content: flex-start;
+                    span{
+                        display: inline-block;
+                    }
+                    .read-num{
+                        width: 90px;        
+                    }
+                }
+                text-align: left;
+                margin-right: 0.5rem;
+                
+            }
+            .artice-pic{
+                width: 40%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.hot-article{
+    .title{
+        justify-content:flex-start
+    }
+    .recommend{
+        margin: 0.5rem 0.3rem;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5rem;
+        text-align:left;
+        .rec-pic{
+            width: 100%;
+        }
+        .rec-title{
+            font-size: 16px;
+            margin: 0.2rem 0;
+        }
+        .other{
+                    font-size: 14px;
+                    color: #999;
+                    display: flex;
+                    justify-content: flex-start;
+                    span{
+                        display: inline-block;
+                    }
+                    .read-num{
+                        width: 90px;        
+                    }
+                }
     }
 }
 .movie-list{
@@ -93,11 +190,16 @@
         .movie-name{
             color: #2C3E50;
             font-size: 16px;
-            text-align: left;
             margin: 0.2rem 0;
         }
-        .btn-box{
+        .movie-name,.begin-time,.btn-box{
             text-align: left;
+        }
+        .begin-time{
+            font-size: 14px;
+            color: #999;
+        }
+        .btn-box{
             .buy-movie{
                 color: #ffffff;
                 font-size: 12px;
@@ -117,4 +219,12 @@
             }
         }
     }
+}
+.hr{
+    height: 1px;
+    margin: 0.5rem 0.3rem;
+    background-color: #eee;
+}
+.router-link-active{
+    color: #ff79a2; 
 }

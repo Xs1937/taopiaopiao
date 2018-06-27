@@ -2,53 +2,55 @@
 	<footer class="menu-wrapper">
 		<ul class="menu-list clearfix">
 			<li class="menu-item">
-				<a href="javascript:;">
+				 <router-link to="/index">
 					<p>
 					<i class="icon iconfont icon-shouye"></i>
 				</p>
 				<p class="menu-name">首页</p>
-				</a>
+				</router-link>
 				
 			</li>
 			<li class="menu-item">
-				<a href="javascript:;">
+				<router-link to="/movie">
 					<p>
 					<i class="icon iconfont icon-dianyingyuan"></i>
 				</p>
 				<p class="menu-name">电影</p>
-				</a>
+				</router-link>
 				
 			</li>
 			<li class="menu-item">
-				<a href="javascript:;">
+				<router-link to="/cinema">
 					<p>
 					<i class="icon iconfont icon-yingyuana"></i>
 				</p>
 				<p class="menu-name">影院</p>
-				</a>
+				</router-link>
 				
 			</li>
 			<li class="menu-item">
-				<a href="javascript:;">
+				<router-link to="/show">
 					<p>
 					<i class="icon iconfont icon-changpian"></i>
 				</p>
 				<p class="menu-name">演出</p>
-				</a>
+				</router-link>
 				
 			</li>
 			<li class="menu-item">
-				<a href="javascript:;">
+				 <router-link to="/user">
 					<p>
 					<i class="icon iconfont icon-wode1"></i>
 				</p>
 				<p class="menu-name">我的</p>
-				</a>
-				
+				</router-link>
 			</li>
 		</ul>
 	</footer>
 </template>
 
 <script>
+	export default {
+		name:"Menu"
+	}
 </script>
