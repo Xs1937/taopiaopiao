@@ -2,7 +2,8 @@
 	<footer class="menu-wrapper">
 		<ul class="menu-list clearfix">
 			<li class="menu-item">
-				 <router-link to="/index">
+				<!--在给router-link-active添加完样式后在发现默认路由样式一直存在。给router-link添加exact属性-->
+				 <router-link to="/" exact>
 					<p>
 					<i class="icon iconfont icon-shouye"></i>
 				</p>
@@ -51,6 +52,10 @@
 
 <script>
 	export default {
-		name:"Menu"
+		name:"Menu",
+		data(){
+			return{
+			}
+		}
 	}
 </script>
