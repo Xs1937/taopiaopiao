@@ -1,6 +1,6 @@
 <template>
 	<footer class="menu-wrapper">
-		<ul class="menu-list clearfix">
+		<ul class="menu-list">
 			<li class="menu-item">
 				<!--在给router-link-active添加完样式后在发现默认路由样式一直存在。给router-link添加exact属性-->
 				 <router-link to="/" exact>

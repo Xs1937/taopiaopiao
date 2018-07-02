@@ -1,5 +1,5 @@
 .content-wrapper{
-   margin-bottom: 1.75rem; 
+   margin-bottom: 56px; 
    position: relative;
    .location-search{
        position: absolute;
@@ -14,6 +14,10 @@
        span{
            display: inline-block;
            margin: 0.3rem 0;
+           .icon-sousuo{
+               font-size: 18px;
+               font-weight:600;
+           }
        }
    }
 }
@@ -29,13 +33,13 @@
     right: 0;
     bottom: 0;
     z-index: 10;
-    padding: 7px 0;
     background-color: #ffffff;
     border-top: 1px solid #ccc;
+    padding: 7px 0;
     .menu-list{
         display: flex;
+        justify-content:space-around;
         .menu-item{
-            flex: 1;
             font-size: 14px;
             a{
                 display: block;
@@ -199,8 +203,9 @@
             font-size: 14px;
             color: #999;
         }
-        .btn-box{
-            .buy-movie{
+    }
+}
+.buy-movie{
                 color: #ffffff;
                 font-size: 12px;
                 border-radius: 16px;
@@ -217,9 +222,6 @@
                 background: -moz-linear-gradient(left, #ef576e, #ff79a2); /* Firefox 3.6 - 15 */
                 background: linear-gradient(left, #ef576e, #ff79a2); /* 标准的语法（必须放在最后） */
             }
-        }
-    }
-}
 .hr{
     height: 1px;
     margin: 0.5rem 0.3rem;
@@ -228,3 +230,164 @@
 .router-link-active{
     color: #ff79a2; 
 }
+.movie-wrapper{
+   position: relative;
+   margin-bottom: 56px; 
+   padding-bottom: 56px;
+   .location-search{
+       display: flex;
+       justify-content: space-between;
+       color: #333;
+       font-size: 16px;
+       margin:0 0.3rem;
+       span{
+           display: inline-block;
+           margin: 0.3rem 0;
+           .icon-sousuo{
+               font-size: 18px;
+               font-weight:600;
+               color: #666;
+           }
+       }
+   }
+   .box-office{
+       background-color: #eee;
+       border-radius: 4px;
+       margin: 0.3rem;
+       padding: 0.3rem;
+       display: flex;
+       justify-content: space-between;
+       font-size: 14px;
+       .current{
+           color: #666;
+       }
+       .today{
+               .font{
+                   color: #999;
+               }
+               .money{
+                   color: #ff79a2;
+               }
+           }
+   }
+}
+.movie-list-wrapper{
+    .movie-item{
+        border-bottom: 1px solid #ddd;
+        margin: 0 0.3rem;
+        padding-top: 0.3rem;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        .movie-pic{
+            width: 25%;
+            img{
+                width: 100%;
+                border-radius: 3px;
+            }
+        }
+        .movie-message{
+            position: relative;
+            margin-left: 0.3rem;
+            width: 75%;
+            p{
+                line-height: 0.7rem;
+                height: 0.7rem;
+                font-size: 14px;
+                text-overflow:ellipsis; 
+                overflow:hidden; 
+                white-space:nowrap;
+                color: #999;
+            }
+            .score{
+                color: #333;
+                line-height: 0.75rem;
+                height: 0.75rem;
+                mark{
+                    font-weight: bold;
+                }
+            }
+            .hot{
+                border-radius: 3px;
+                border: 1px solid #1ca7dc;
+                padding: 3px;
+            }
+            .today{
+                color: #e05c98;
+                border-color: #e05c98;
+            }
+            .week{
+                color: #ea8b11;
+                border-color: #ea8b11;
+                margin-left: 0.1rem;
+            }
+            
+            mark{
+                background-color: transparent;
+                color: #ea8b11;
+            }
+            .movie-info{
+                display: flex;
+                justify-content: flex-start;
+                align-items:center; //元素垂直居中
+                margin-bottom: 0.15rem;
+               .movie-name{
+                   font-size: 24px;
+                   font-weight: bold;
+                   margin-right: 0.2rem;
+               }
+               .transform{
+                   border: 1px solid #ddd;
+                   border-radius: 3px 0 0 3px;
+                   background-color: #B3B3B3;
+                   color: #fff;
+                   padding: 2px;
+                   font-size: 12px;
+                   padding: 3px;
+                   border-right: none;
+                   
+               }
+               .max{
+                   border-radius: 0 3px 3px 0;
+                   border: 1px solid #ddd;
+                   color: #666;
+                   padding: 2px;
+                   font-size: 12px;
+                   padding: 3px;
+                   border-left: none;
+                   color: #888;
+               }
+               .point{
+                   border-color: #1ca7dc;
+                   margin-left: 6px;
+                   color: #1ca7dc;
+               }
+            }
+            .tags{
+                height: 0.8rem;
+                line-height: 0.8rem;
+            }
+            .other{
+                border-top: 1px solid #ddd;
+                margin-top: 0.2rem;
+                padding: 0.2rem 0;
+                mark{
+                    border-right: 1px solid #ccc;
+                    margin-right: 0.2rem;
+                    padding-right: 0.2rem;
+                }
+            }
+            .btn-box{
+                position: absolute;
+                right: 0rem;
+                top: 1rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+    .movie-list-wrapper .movie-item .movie-message .movie-info .movie-name {
+        font-size: 18px;
+    }
+}
+
