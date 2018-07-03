@@ -162,6 +162,19 @@
         float: left;
         width: 150px;
         margin: 0.2rem 0.15rem;
+        .video{
+            position: relative;
+            img{
+                width: 100%;
+            }
+            .video-intro{
+                position: absolute;
+                left: 0;
+                bottom: 0.2rem;
+                color: #fff;
+                font-size: 12px;
+            }
+        }
         &:first-child{
             margin-left: 0;
         }
@@ -222,9 +235,21 @@
                 background: -moz-linear-gradient(left, #ef576e, #ff79a2); /* Firefox 3.6 - 15 */
                 background: linear-gradient(left, #ef576e, #ff79a2); /* 标准的语法（必须放在最后） */
             }
+            .pre-sale{
+                background: -webkit-linear-gradient(left, #6dc1fd, #0196ff); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(left, #6dc1fd, #0196ff); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(left, #6dc1fd, #0196ff); /* Firefox 3.6 - 15 */
+                background: linear-gradient(left, #6dc1fd, #0196ff); /* 标准的语法（必须放在最后） */
+            }
+            .pre-sale:active{
+                background: -webkit-linear-gradient(left, #0196ff, #6dc1fd); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(left, #0196ff, #6dc1fd); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(left, #0196ff, #6dc1fd); /* Firefox 3.6 - 15 */
+                background: linear-gradient(left, #0196ff, #6dc1fd); /* 标准的语法（必须放在最后） */
+            }
 .hr{
     height: 1px;
-    margin: 0.5rem 0.3rem;
+    margin: 0.3rem 0.3rem 0.5rem;
     background-color: #eee;
 }
 .router-link-active{
@@ -234,9 +259,17 @@
    position: relative;
    margin-bottom: 56px; 
    padding-bottom: 56px;
+   .vux-tab .vux-tab-item.vux-tab-selected{
+       color: #ef576e;
+       border-bottom:3px solid #ef576e;
+   }
+   .vux-tab-bar-inner{
+       background-color: #ef576e;
+   }
    .location-search{
        display: flex;
        justify-content: space-between;
+       align-items: center;
        color: #333;
        font-size: 16px;
        margin:0 0.3rem;
@@ -248,6 +281,26 @@
                font-weight:600;
                color: #666;
            }
+       }
+       .module-name{
+           width: 150px;
+           .vux-button-group > a{
+               height: 30px;
+               line-height: 30px;
+           }
+           .vux-button-group > a.vux-button-tab-item-first:after,
+           .vux-button-group > a.vux-button-tab-item-last:after{
+               border:1px solid #ef576e;
+           }   
+           .vux-button-group > a.vux-button-tab-item-first,
+           .vux-button-group > a.vux-button-tab-item-last{
+              color: #ef576e; 
+           }
+           .vux-button-group > a.vux-button-group-current{
+               background-color: #ef576e;
+               color: #fff;
+               border: none;
+           } 
        }
    }
    .box-office{
@@ -273,14 +326,14 @@
 }
 .movie-list-wrapper{
     .movie-item{
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #eee;
         margin: 0 0.3rem;
         padding-top: 0.3rem;
         display: flex;
         justify-content: space-between;
         text-align: left;
         .movie-pic{
-            width: 25%;
+            width: 23%;
             img{
                 width: 100%;
                 border-radius: 3px;
@@ -289,7 +342,7 @@
         .movie-message{
             position: relative;
             margin-left: 0.3rem;
-            width: 75%;
+            width: 77%;
             p{
                 line-height: 0.7rem;
                 height: 0.7rem;
@@ -331,13 +384,14 @@
                 justify-content: flex-start;
                 align-items:center; //元素垂直居中
                 margin-bottom: 0.15rem;
+                margin-top: 0.1rem;
                .movie-name{
                    font-size: 24px;
                    font-weight: bold;
                    margin-right: 0.2rem;
                }
                .transform{
-                   border: 1px solid #ddd;
+                   border: 1px solid #eee;
                    border-radius: 3px 0 0 3px;
                    background-color: #B3B3B3;
                    color: #fff;
@@ -349,7 +403,7 @@
                }
                .max{
                    border-radius: 0 3px 3px 0;
-                   border: 1px solid #ddd;
+                   border: 1px solid #eee;
                    color: #666;
                    padding: 2px;
                    font-size: 12px;
@@ -368,7 +422,7 @@
                 line-height: 0.8rem;
             }
             .other{
-                border-top: 1px solid #ddd;
+                border-top: 1px solid #eee;
                 margin-top: 0.2rem;
                 padding: 0.2rem 0;
                 mark{
@@ -384,6 +438,28 @@
             }
         }
     }
+}
+.new-film-list{
+    .time-box{
+        text-align: left;
+        margin: 0.5rem 0.3rem 0.3rem;
+        .week{
+            color: #999;
+            font-size: 12px;
+            margin-bottom: 0.3rem;
+        }
+        .date{
+            font-size: 22px;
+            color: #333;
+        }
+        
+        
+    }
+    .movie-item{
+            .movie-pic{
+            margin-bottom: 0.3rem;
+        }
+        }
 }
 @media screen and (max-width: 320px) {
     .movie-list-wrapper .movie-item .movie-message .movie-info .movie-name {

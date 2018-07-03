@@ -21,11 +21,11 @@
 				
 			</li>
 			<li class="menu-item">
-				<router-link to="/cinema">
+				<router-link to="/video">
 					<p>
 					<i class="icon iconfont icon-yingyuana"></i>
 				</p>
-				<p class="menu-name">影院</p>
+				<p class="menu-name">视频</p>
 				</router-link>
 				
 			</li>

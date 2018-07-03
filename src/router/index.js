@@ -4,7 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Main from '@/components/Main'
 import Movie from '@/components/views/Movie'
 import Index from '@/components/views/Index'
-import Cinema from '@/components/views/Cinema'
+import Video from '@/components/views/Video'
 import Show from '@/components/views/Show'
 import User from '@/components/views/User'
 Vue.use(Router)
@@ -27,9 +27,9 @@ export default new Router({
         	component: Movie 
         },
         { 
-        	path: '/cinema', 
-        	name: 'Cinema', 
-        	component: Cinema 
+        	path: '/video', 
+        	name: 'Video', 
+        	component: Video 
         },
         { 
         	path: '/show', 
