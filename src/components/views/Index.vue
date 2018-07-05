@@ -3,7 +3,7 @@
 			<div class="banner">
 			<p class="location-search">
 				<span class="loaction">上海<i class="icon iconfont icon-down"></i></span>
-				<span class="search"><i class="icon iconfont icon-sousuo"></i></span>
+				<span class="search"><i class="icon iconfont icon-search"></i></span>
 			</p>
 			<swiper :list="demo03_list" style="width:100%;margin:0 auto;" :aspect-ratio="295/720" dots-position="center"></swiper>
 		</div>
@@ -13,7 +13,7 @@
 		<section class="hot-movie">
 			<header class="title clearfix">
 				<h3 class="classify-name">热映影片</h3>
-				<a href="javascript:;" class="classify-num">全部<b>76</b>部<i class="icon iconfont icon-jiantou"></i></a>
+				<a href="javascript:;" class="classify-num">全部<b>76</b>部<i class="icon iconfont icon-arrow-right"></i></a>
 			</header>
 			 <scroller lock-y :scrollbar-x=false>
 	      <ul class="movie-list">
