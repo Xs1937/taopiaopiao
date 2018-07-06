@@ -8,7 +8,8 @@
 				<li class="filter-item" @click="filterFeature"><span>特色</span><i class="icon iconfont icon-down"></i></li>
 			</ul>
 		</div>
-	<swiper :list="demo03_list" height="150px" dots-position="center"></swiper>
+		<div class="cinema-wrapper">
+			<swiper :list="demo03_list" height="150px" dots-position="center"></swiper>
 	<div class="cinema-list">
 		<ul class="cinema-box">
 			<li class="cinema-item" v-for="i in 5">
@@ -27,6 +28,8 @@
 		</ul>
 	</div>
 
+		</div>
+	
 	<!--筛选区域-->
 	<div v-transfer-dom>
 		<x-dialog v-model="showHideOnBlur" class="dialog-demo filter" hide-on-blur>
@@ -56,62 +59,46 @@
 			<!--品牌-->
 			<div class="filter-content" v-show="filterBrandShow">
 				<ul class="brand-list">
-					<li class="brand-item active">全部</li>
-					<li class="brand-item">SFC上影影城</li>
-					<li class="brand-item">万达影城</li>
-					<li class="brand-item">大地影城</li>
-					<li class="brand-item">星美国际影城</li>
-					<li class="brand-item">百丽宫影城</li>
-					<li class="brand-item">DFC影城</li>
-					<li class="brand-item">大光明电影院</li>
+					<li class="brand-item active"><span><i class="icon iconfont icon-selected"></i>&nbsp;全部</span><b>100</b></li>
+					<li class="brand-item"><span><i class="icon iconfont icon-selected"></i>&nbsp;SFC上影影城</span><b>30</b></li>
+					<li class="brand-item"><span><i class="icon iconfont icon-selected"></i>&nbsp;万达影城</span><b>20</b></li>
+					<li class="brand-item"><span><i class="icon iconfont icon-selected"></i>&nbsp;大地影城</span><b>21</b></li>
+					<li class="brand-item"><span><i class="icon iconfont icon-selected"></i>&nbsp;星美国际影城</span><b>10</b></li>
+					<li class="brand-item"><span><i class="icon iconfont icon-selected"></i>&nbsp;百丽宫影城</span><b>8</b></li>
+					<li class="brand-item"><span><i class="icon iconfont icon-selected"></i>&nbsp;DFC影城</span><b>6</b></li>
+					<li class="brand-item"><span><i class="icon iconfont icon-selected"></i>&nbsp;大光明电影院</span><b>5</b></li>
 				</ul>
 			</div>
 				<!--距离-->
 			<div class="filter-content" v-show="filterDistanceShow">
-				<ul class="area-list">
-					<li class="area-item active">不限区域</li>
-					<li class="area-item">宝山区</li>
-					<li class="area-item">崇明区</li>
-					<li class="area-item">奉贤区</li>
-					<li class="area-item">虹口区</li>
-					<li class="area-item">黄浦区</li>
-					<li class="area-item">嘉定区</li>
-					<li class="area-item">静安区</li>
-					<li class="area-item">金山区</li>
-					<li class="area-item">卢湾区</li>
-					<li class="area-item">闵行区</li>
-					<li class="area-item">浦东新区</li>
-					<li class="area-item">普陀区</li>
-					<li class="area-item">青浦区</li>
-					<li class="area-item">松江区</li>
-					<li class="area-item">徐汇区</li>
-					<li class="area-item">杨浦区</li>
-					<li class="area-item">闸北区</li>
-					<li class="area-item">长宁区</li>
+				<ul class="brand-list">
+					<li class="brand-item active"><span><i class="icon iconfont icon-selected"></i>&nbsp;离我最近</span></li>
+					<li class="brand-item"><span><i class="icon iconfont icon-selected"></i>&nbsp;价格最低</span></li>
 				</ul>
 			</div>
 			<!--特色-->
 			<div class="filter-content" v-show="filterFeatureShow">
+				<ul class="area-list nolimit">
+					<li class="area-item active">不限</li>
+				</ul>
+				<p class="feture-font">影院特色</p>
 				<ul class="area-list">
-					<li class="area-item active">不限区域</li>
-					<li class="area-item">宝山区</li>
-					<li class="area-item">崇明区</li>
-					<li class="area-item">奉贤区</li>
-					<li class="area-item">虹口区</li>
-					<li class="area-item">黄浦区</li>
-					<li class="area-item">嘉定区</li>
-					<li class="area-item">静安区</li>
-					<li class="area-item">金山区</li>
-					<li class="area-item">卢湾区</li>
-					<li class="area-item">闵行区</li>
-					<li class="area-item">浦东新区</li>
-					<li class="area-item">普陀区</li>
-					<li class="area-item">青浦区</li>
-					<li class="area-item">松江区</li>
-					<li class="area-item">徐汇区</li>
-					<li class="area-item">杨浦区</li>
-					<li class="area-item">闸北区</li>
-					<li class="area-item">长宁区</li>
+					<li class="area-item">退票</li>
+					<li class="area-item">改签</li>
+					<li class="area-item">观影小食</li>
+					<li class="area-item">IMAX厅</li>
+					<li class="area-item">巨幕厅</li>
+					<li class="area-item">中国巨幕</li>
+					<li class="area-item">realD厅</li>
+					<li class="area-item">4K厅</li>
+					<li class="area-item">4DX厅</li>
+					<li class="area-item">4D厅</li>
+					<li class="area-item">杜比厅</li>
+					<li class="area-item">双机3D</li>
+					<li class="area-item">可停车</li>
+					<li class="area-item">艺术影厅</li>
+					<li class="area-item">激光厅</li>
+					<li class="area-item">MX4D厅</li>
 				</ul>
 			</div>
 			<div @click="showHideOnBlur=false">

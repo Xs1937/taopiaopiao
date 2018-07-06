@@ -1,6 +1,6 @@
 <template>
 	<div class="movie-wrapper">
-		<header>
+		<header class="movie-header">
 			<p class="location-search">
 				<span class="loaction">上海<i class="icon iconfont icon-down"></i></span>
 				<span class="module-name">
@@ -17,14 +17,18 @@
 			<tab :line-width="2" custom-bar-width="30px" v-model="index">
 			<tab-item :selected="actived === index" v-for="(item, index) in navTab" @click="actived = index" :key="index">{{item}}</tab-item>
 		</tab>
-		<!--tab1-->
-		<div class="tab-swiper vux-center" v-show="index===0">
-			<hot-film></hot-film>
+		
+		<div class="film-content-wrapper">
+				<!--tab1-->
+			<div class="tab-swiper vux-center" v-show="index===0">
+				<hot-film></hot-film>
+			</div>
+			<!--tab2-->
+			<div class="tab-swiper vux-center" v-show="index===1">
+				<right-show></right-show>
+			</div>
 		</div>
-		<!--tab2-->
-		<div class="tab-swiper vux-center" v-show="index===1">
-			<right-show></right-show>
-		</div>
+		
 		</div>
 		<!--影院-->
 		<div id="cinema" v-show="this.film === 1">

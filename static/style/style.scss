@@ -258,6 +258,25 @@
 .movie-wrapper{
    position: relative;
    margin-bottom: 56px; 
+    .vux-tab-wrap{
+        position: fixed;
+        padding-top: 44px;
+        top: 1.2rem;
+        left: 0;
+        right: 0;
+        z-index: 100;
+   }
+   .movie-header{
+       position: fixed;
+       z-index: 100;
+       top: 0;
+       left: 0;
+       right: 0;
+       background-color: #fff;
+   }
+   .film-content-wrapper,.cinema-wrapper{
+       margin-top: 2.7rem;
+   }
 // padding-bottom: 56px;
    .vux-tab .vux-tab-item.vux-tab-selected{
        color: #ef576e;
@@ -464,7 +483,12 @@
 
 
 .filter-wrapper{
-    position: relative;
+    position: fixed;
+    top: 1.25rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #fff;
     .filter-list{
         display: flex;
         justify-content: space-around;
@@ -581,6 +605,12 @@
     }
     .filter-content{
         border-top: 1px solid #eee;
+        .feture-font{
+            text-align: left;
+            margin: 0.4rem 0 0 0.42rem;
+            font-size: 14px;
+            color: #999;
+        }
         .area-list{
             width: 100%;
             padding: 0.3rem;
@@ -602,6 +632,37 @@
                 border-color: #ef576e;
             }
         }
+        .nolimit{
+            border-bottom: 1px solid #efefef;
+            margin-left: 0.4rem;
+            padding: 0.3rem 0;
+            .area-item{
+                margin: 0.15rem 0;
+            }
+        }
+        .brand-list{
+            padding: 0;
+            height: 5rem;
+            overflow: auto;
+            .brand-item{
+                border-bottom: 1px solid #ddd;
+                height: 1.2rem;
+                line-height: 1.2rem;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 0.4rem 0 0.25rem;
+                font-size: 14px;
+                .icon{
+                    color: #fff;
+                }
+            }
+            .active{
+                color: #ef576e;
+                .icon{
+                    color: #ef576e;
+                }
+            }
+        }
     }
 }
 
@@ -611,28 +672,28 @@
     }
     .filter {
         .weui-mask,.weui-dialog{
-            top: 3rem;
+            top: 2.76rem;
         }
     }
 }
 @media screen and (min-width: 360px) {
     .filter {
         .weui-mask,.weui-dialog{
-            top: 2.75rem;
+            top: 2.66rem;
         }
     }
 }
 @media screen and (min-width: 414px) {
     .filter {
         .weui-mask,.weui-dialog{
-            top: 2.75rem;
+            top: 2.54rem;
         }
     }
 }
 @media screen and (min-width: 411px) {
     .filter {
         .weui-mask,.weui-dialog{
-            top: 2.68rem;
+            top: 2.63rem;
         }
     }
 }
