@@ -40,7 +40,7 @@
         display: flex;
         justify-content:space-around;
         .menu-item{
-            font-size: 14px;
+            font-size: 12px;
             a{
                 display: block;
                 .icon{
@@ -87,7 +87,7 @@
                 width: 60%;
                 .name{
                     font-size: 16px;
-                    line-height: 1.3;
+                    line-height: 1.5;
                     display: -webkit-box!important;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -99,7 +99,7 @@
                     position: absolute;
                     bottom: 0.1rem;
                     left: 0;
-                    font-size: 14px;
+                    font-size: 12px;
                     color: #999;
                     display: flex;
                     justify-content: flex-start;
@@ -663,7 +663,7 @@
         }
     }
 }
-.video-wrapper,.show-wrapper,.movie-wrapper{
+.video-wrapper,.show-wrapper,.movie-wrapper,.user-wrapper{
     position: relative;
     margin-bottom: 56px; 
 }
@@ -700,6 +700,7 @@
     .vux-tab{
         .vux-tab-item{
             background: transparent;
+            color: #7e7e7e;
         }
         .vux-tab-item.vux-tab-selected{
            color: #ff79a2;
@@ -894,8 +895,123 @@
                 }
         }
     }
-    
 
+}
+
+.user-wrapper{
+    background-color: #F5F5F5;
+    .user-header{
+        background:url(../img/timg.jpg) center bottom no-repeat;
+        background-size: cover;
+        padding: 0.5rem;
+        .set-remind{
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            .icon{
+                font-size: 20px;
+            }
+        }
+        .user-info{
+            margin: 0.8rem auto 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            .user-photo{
+                width: 2.2rem;
+                height: 2.2rem;
+                background-color: #fff;
+                border-radius: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                }
+            }
+            .user-msg{
+                color: #fff;
+                text-align: left;
+                width: 70%;
+                .user-name{
+                    font-size: 18px;
+                }
+                .attention{
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0.33rem 0;
+                }
+                .rank{
+                    background-color: #666;
+                    border-radius: 20px;
+                    padding: 0.05rem 0 0.15rem;
+                    font-size: 12px;
+                    color: #eee;
+                    width: 80px;
+                    text-align: center;
+                    i{
+                        color: #eee;
+                    }
+                }
+            }
+        }
+    }
+    .user-content{
+        background-color: #fff;
+        margin-top: 0.2rem;
+        .core-classify{
+            display: flex;
+            justify-content: space-around;
+            padding: 0.4rem 0;
+            .classify-item{
+                width: 25%;
+                .classify-ico{
+                    .icon{
+                        font-size: 24px;
+                    }
+                    .icon-film{
+                        color: #F74F65; 
+                    }
+                    .icon-youhuiquan{
+                        color: #F69E48; 
+                    }
+                    .icon-jiuzhenqia{
+                        color: #3D98E0; 
+                    }
+                    .icon-show{
+                        color: #A181EB; 
+                    }
+                    
+                }
+                .classify-name{
+                    margin-top: 0.2rem;
+                    font-size: 14px;
+                    color: #3E3E3C;
+                }
+            }
+        }
+    }
+    .user-core,.other{
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        .member-core{
+            font-size: 16px;
+            color: #2A2A2A;
+        }
+        .advertising{
+            font-size: 14px;
+            color: #888888;
+            .icon{
+                font-size: 14px;
+            }
+        }
+    }
+    .other{
+        border-top: 1px solid #eee;
+       margin: 0 0.5rem;
+       padding: 0.5rem 0;
+    }
 }
 
 @media screen and (min-width: 320px) {
