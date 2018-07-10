@@ -7,6 +7,15 @@
 			</p>
 			<swiper :list="demo03_list" style="width:100%;margin:0 auto;" :aspect-ratio="295/720" dots-position="center"></swiper>
 		</div>
+		<!--滚动显示-->
+		<div class="loaction-search scroll-search" style="display: none;">
+				<span class="loaction">上海<i class="icon iconfont icon-down"></i></span>
+				<div class="search">
+					<i class="icon iconfont icon-search"></i>
+					<input type="text" placeholder="搜索明星、演出" class="control"/>
+				</div>
+		</div>
+		
 		<div class="advert">
 			<img src="../../../static/img/0.png"/>
 		</div>
@@ -80,6 +89,7 @@
 
 <script>
 	import { Swiper, Scroller } from 'vux'
+	import $ from 'jquery'
 	export default {
 		name:"Index",
 		components: {
@@ -99,6 +109,24 @@
 			  img: '/static/img/banner3.png',
 			}]
 	    }
+  	},
+  	mounted(){
+  		this.$nextTick(() => {
+  			this.domHandel();
+  		})
+  	},
+  	methods: {
+  		domHandel(){
+  			var bh = $(".banner").height();
+  			$(window).scroll(function(){
+  				var s = $(window).scrollTop();
+  				if(s > bh/2){
+  					$(".scroll-search").slideDown(500);
+  				}else{
+  					$(".scroll-search").slideUp(500);
+  				}
+  			})
+  		},
   	}
 	}
 </script>

@@ -3,7 +3,7 @@
 		<header class="show-header">
 			<h2 class="show-title">演出</h2>
 		</header>
-		<div class="location-search">
+		<div class="loaction-search">
 				<span class="loaction">上海<i class="icon iconfont icon-down"></i></span>
 				<div class="search">
 					<i class="icon iconfont icon-search"></i>

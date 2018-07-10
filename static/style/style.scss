@@ -667,14 +667,17 @@
     position: relative;
     margin-bottom: 56px; 
 }
-.show-wrapper{
-    .show-title{
-        font-size: 18px;
-        line-height: 1.4rem;
-        height: 1.4rem;
-        border-bottom: 1px solid #ddd;
+
+    .scroll-search{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        z-index: 99; 
     }
-    .location-search{
+    .loaction-search{
+       
         font-size: 14px;
         padding: 0.3rem;
         display: flex;
@@ -693,6 +696,13 @@
                 width: 80%;
             }
         }
+    }
+.show-wrapper{
+    .show-title{
+        font-size: 18px;
+        line-height: 1.4rem;
+        height: 1.4rem;
+        border-bottom: 1px solid #ddd;
     }
     .swiper-box{
         margin-bottom: 3px;

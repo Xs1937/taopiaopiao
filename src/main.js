@@ -3,8 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
-
+import $ from 'jquery'
 
 import '../static/style/style.scss';
 require('./mock.js')
