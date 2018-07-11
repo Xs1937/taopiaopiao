@@ -3,7 +3,9 @@
 			<div class="banner">
 			<p class="location-search">
 				<span class="loaction">上海<i class="icon iconfont icon-down"></i></span>
-				<span class="search"><i class="icon iconfont icon-search"></i></span>
+				<span class="search">
+					 <router-link to="/search"><i class="icon iconfont icon-search"></i></router-link>
+				</span>
 			</p>
 			<swiper :list="demo03_list" style="width:100%;margin:0 auto;" :aspect-ratio="295/720" dots-position="center"></swiper>
 		</div>
@@ -12,7 +14,7 @@
 				<span class="loaction">上海<i class="icon iconfont icon-down"></i></span>
 				<div class="search">
 					<i class="icon iconfont icon-search"></i>
-					<input type="text" placeholder="搜索明星、演出" class="control"/>
+					<input type="text" placeholder="搜索明星、演出" class="control" @focus="goSearch"/>
 				</div>
 		</div>
 		
@@ -127,6 +129,9 @@
   				}
   			})
   		},
+  		goSearch(){
+  			this.$router.push('/search')
+  		}
   	}
 	}
 </script>

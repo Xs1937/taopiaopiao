@@ -15,8 +15,9 @@
 						</li>
 					</ul>
 				</scroller>
-				<div class="hr"></div>
-				<header class="title clearfix">
+				<div class="hr "></div>
+				<section class="clearfix" style="padding-top: 1px;">
+					<header class="title ">
 					<h3 class="classify-name">近期最受期待</h3>
 				</header>
 				<scroller lock-y :scrollbar-x=false>
@@ -32,6 +33,8 @@
 						</li>
 					</ul>
 				</scroller>
+				</section>
+				
 				<div class="hr" style="margin-bottom: 0;"></div>
 				<div class="advert">
 					<img src="../../../../static/img/0.png"/>
@@ -114,8 +117,6 @@
 	}
 </script>
 <style scoped="scoped">
-.title{
-	margin-top: 0.6rem;
-}
+
 
 </style>

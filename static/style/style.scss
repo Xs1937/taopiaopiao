@@ -14,12 +14,41 @@
        span{
            display: inline-block;
            margin: 0.3rem 0;
-           .icon-sousuo{
+           .icon-search{
                font-size: 18px;
                font-weight:600;
+               color: #fff;
            }
        }
    }
+   .search-form{
+       font-size: 14px;
+        padding: 0.3rem;
+        display: flex;
+        justify-content: space-between;
+        line-height: 0.8rem;
+        border-bottom: 1px solid #eee;
+        background-color: #fff;
+        .search{
+            border-radius: 20px;
+            background-color: #f9f9f9;
+            height: 0.8rem;
+            line-height: 0.8rem;            
+            width: 80%;
+            padding:0 0.2rem;
+            text-align: left;
+            .control{
+                background-color: transparent;
+                width: 80%;
+            }
+        }
+   }
+}
+.search-wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
 }
 .advert{
     padding: 0.2rem 0.3rem;
@@ -56,8 +85,9 @@
     }
 }
 .hot-movie{
+    padding-top:1px ;
     .title{
-        margin: 0.2rem 0.3rem;
+        margin: 0.3rem 0.3rem 0.2rem;
         display: flex;
         //justify-content 用于设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。
         //flex-start  默认值。项目位于容器的开头。 
@@ -249,7 +279,7 @@
             }
 .hr{
     height: 1px;
-    margin: 0.3rem 0.3rem 0.5rem;
+    margin: 0.3rem 0.3rem 0.4rem;
     background-color: #eee;
 }
 .router-link-active{
@@ -259,7 +289,7 @@
     .vux-tab-wrap{
         position: fixed;
         padding-top: 44px;
-        top: 1.2rem;
+        top: 1.25rem;
         left: 0;
         right: 0;
         z-index: 100;
@@ -323,7 +353,7 @@
    .box-office{
        background-color: #eee;
        border-radius: 4px;
-       margin: 0.3rem;
+       margin: 0.35rem 0.3rem 0;
        padding: 0.3rem;
        display: flex;
        justify-content: space-between;
@@ -684,8 +714,8 @@
         justify-content: space-between;
         line-height: 0.8rem;
         .search{
-            border-radius: 4px;
-            background-color: #eee;
+            border-radius: 6px;
+            background-color: #f9f9f9;
             height: 0.8rem;
             line-height: 0.8rem;            
             width: 80%;
@@ -698,13 +728,33 @@
         }
     }
 .show-wrapper{
+    .show-header{
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       z-index: 10; 
+       height: 2.6rem;
+       background-color: #fff;
+    }
     .show-title{
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.4rem;
         height: 1.4rem;
         border-bottom: 1px solid #ddd;
     }
+    .show-content{
+        margin-top: 2.6rem;
+        .recommend{
+            margin-top: 3.8rem;
+        }
+    }
     .swiper-box{
+        position: fixed;
+        top: 2.5rem;
+        left: 0;
+        right: 0;
+        z-index: 10;
         margin-bottom: 3px;
     }
     .vux-tab{
@@ -795,7 +845,7 @@
             display: flex;
             justify-content: space-between;
             padding:0.7rem 0.3rem 0.4rem;
-            span{
+            .order-filter{
                font-size: 14px;
                 color: #999; 
             }
@@ -1023,8 +1073,44 @@
        padding: 0.5rem 0;
     }
 }
-
-@media screen and (min-width: 320px) {
+.filter-panel{
+    position: fixed;
+    top: 1.43rem;
+    left: 0;
+    right: 0;
+    bottom: 54px;
+    background-color: #fff;
+    z-index: 10;
+    display: none;
+    dl{
+        dt{
+            text-align: center;
+            color: #666;
+        }
+        dt,dd{
+            line-height: 1.2rem;
+            height: 1.2rem;
+            font-size: 14px;
+            color: #333；
+        }
+        dd{
+            padding: 0 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            .icon{
+                display: none;
+            }
+        }
+        .actived{
+            color: #d8d427;
+            .icon{
+                display: block;
+            }
+            
+        }
+    }
+}
+@media screen and (max-width: 320px) {
     .movie-list-wrapper .movie-item .movie-message .movie-info .movie-name {
         font-size: 18px;
     }
@@ -1033,6 +1119,15 @@
             top: 2.76rem;
         }
     }
+    .movie-wrapper .film-content-wrapper, .movie-wrapper .cinema-wrapper{
+       margin-top: 2.9rem;
+   }
+   .hot-movie .movie-article .article-item .article-title .name{
+       font-size: 14px;
+   }
+   .show-wrapper .show-content .recommend{
+       margin-top: 4rem;
+   }
 }
 @media screen and (min-width: 360px) {
     .filter {

@@ -5,11 +5,11 @@
 				<span class="loaction">上海<i class="icon iconfont icon-down"></i></span>
 				<span class="module-name">
 					<button-tab v-model="film">
-				        <button-tab-item  @on-item-click="consoleIndex()">电影</button-tab-item>
-				        <button-tab-item selected @on-item-click="consoleIndex()">影院</button-tab-item>
+				        <button-tab-item selected @on-item-click="consoleIndex()">电影</button-tab-item>
+				        <button-tab-item  @on-item-click="consoleIndex()">影院</button-tab-item>
 			        </button-tab>
 				</span>
-				<span class="search"><i class="icon iconfont icon-search"></i></span>
+				<span class="search"><router-link to="/search"><i class="icon iconfont icon-search"></i></router-link></span>
 			</p>
 		</header>
 		<!--电影-->
@@ -70,7 +70,7 @@
 		data() {
 			return {
 				actived: '正在热映',
-				index: 1,
+				index: 0,
 				navTab: list(),
 				film: 0
 			}

@@ -2,14 +2,15 @@
 	<div class="show-wrapper">
 		<header class="show-header">
 			<h2 class="show-title">演出</h2>
-		</header>
-		<div class="loaction-search">
+			<div class="loaction-search">
 				<span class="loaction">上海<i class="icon iconfont icon-down"></i></span>
 				<div class="search">
 					<i class="icon iconfont icon-search"></i>
-					<input type="text" placeholder="搜索明星、演出" class="control"/>
+					<input type="text" placeholder="搜索明星、演出" class="control" @focus="goSearch"/>
 				</div>
 		</div>
+		</header>
+		
 		<section class="show-content">
 			<div class="swiper-box">
 				<tab :line-width="2" custom-bar-width="30px" v-model="index">
@@ -34,7 +35,7 @@
 				<div class="hot-recommend">
 					<div class="hot-header">
 					<h2 class="box-title">热门推荐</h2>
-					<span class="loaction">推荐排序<i class="icon iconfont icon-down"></i></span>
+					<span class="order-filter">推荐排序<i class="icon iconfont icon-down"></i></span>
 					</div>
 					<ul class="hot-list">
 						<li class="hot-item" v-for="i in 6">
@@ -145,10 +146,19 @@
 			</div>
 			<!--歌剧话剧-->
 		</section>
+		<div class="filter-panel">
+			<dl>
+				<dt>排序</dt>
+				<dd><span>推荐排序</span><i class="icon iconfont icon-selected"></i></dd>
+				<dd class="actived"><span>最近开演</span><i class="icon iconfont icon-selected"></i></dd>
+				<dd><span>附近演出</span><i class="icon iconfont icon-selected"></i></dd>
+			</dl>
+		</div>
 	</div>
 </template>
 
 <script>
+import $ from 'jquery'
 	import {
 		Tab,
 		TabItem,
@@ -193,9 +203,20 @@
 				}]
 			}
 		},
+		mounted(){
+  		this.$nextTick(() => {
+  			this.domHandel();
+  		})
+  	},
 		methods: {
-			consoleIndex(){
-			}
+			goSearch(){
+  				this.$router.push('/search')
+  		},
+  		domHandel(){
+  			$(".order-filter").on("click",function(){
+  				$(".filter-panel").slideDown(500);
+  			})
+  		},
 		}
 	}
 </script>

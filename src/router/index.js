@@ -7,6 +7,7 @@ import Index from '@/components/views/Index'
 import Video from '@/components/views/Video'
 import Show from '@/components/views/Show'
 import User from '@/components/views/User'
+import Search from '@/components/views/Search'
 Vue.use(Router)
 
 export default new Router({
@@ -43,5 +44,10 @@ export default new Router({
         },
       ]
     },
+    { 
+        	path: '/search', 
+        	name: 'Search', 
+        	component: Search 
+        },
   ]
 })
