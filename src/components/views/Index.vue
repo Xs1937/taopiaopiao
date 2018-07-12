@@ -28,13 +28,13 @@
 			</header>
 			 <scroller lock-y :scrollbar-x=false>
 	      <ul class="movie-list">
-					<li class="list-item" v-for="i in 7">
+					<li class="list-item" v-for="item in newListShow">
 						<div class="item-box">
-							<img src="../../../static/img/movie-pic.jpg" alt="" class="pic"/>
-							<span class="tigs">3DMAX</span>
-							<p class="score">观众评分9.5</p>
+							<img :src="item.pic" alt="" class="pic"/>
+							<span class="tigs">{{item.tigs}}</span>
+							<p class="score">观众评分{{item.score}}</p>
 						</div>
-						<p class="movie-name">侏罗纪世界2</p>
+						<p class="movie-name">{{item.title}}</p>
 						<div class="btn-box">
 							<a class="buy-movie">购票</a>
 						</div>
@@ -92,6 +92,7 @@
 <script>
 	import { Swiper, Scroller } from 'vux'
 	import $ from 'jquery'
+	import api from '../../axios/api.js'
 	export default {
 		name:"Index",
 		components: {
@@ -109,12 +110,14 @@
 			},{
 			  url: 'javascript:',
 			  img: '/static/img/banner3.png',
-			}]
-	    }
+			}],
+	    newListShow:[]
+	   }
   	},
   	mounted(){
   		this.$nextTick(() => {
   			this.domHandel();
+  			this.setNewApi();
   		})
   	},
   	methods: {
@@ -131,7 +134,13 @@
   		},
   		goSearch(){
   			this.$router.push('/search')
-  		}
+  		},
+  		setNewApi(){
+  			api.JH_news("/news/index",'type=top&key=123456')
+  				 .then(res=>{
+  				 		this.newListShow = res.articles;
+  				 })
+  		},
   	}
 	}
 </script>
